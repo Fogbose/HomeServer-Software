@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+secrets/
+private/
+.work/
+client-kit/
+dist/
+node_modules/
+__pycache__/
+*.py[cod]
+*.log
+*.pem
+*.key
+*.dump
+*.zip
+*.tar*

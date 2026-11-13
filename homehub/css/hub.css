@@ -1,0 +1,39 @@
+.homehub { overflow-y: auto; background: var(--color-main-background); color: var(--color-main-text); }
+.homehub-inner { max-width: 1160px; margin: 0 auto; padding: 48px 40px 28px; }
+.homehub-header { margin-bottom: 30px; }
+.homehub-eyebrow { font-size: 11px; letter-spacing: .16em; font-weight: 700; color: var(--color-text-maxcontrast); margin: 0 0 12px; }
+.homehub h1 { font-size: clamp(26px, 4vw, 42px); font-weight: 700; line-height: 1.15; margin: 0 0 12px; letter-spacing: -.035em; }
+.homehub-intro { color: var(--color-text-maxcontrast); font-size: 16px; margin: 0; }
+.homehub-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-bottom: 18px; }
+.homehub-search { flex: 1 1 280px; max-width: 410px; }
+.homehub-search input { width: 100%; height: 44px; margin: 0; border-radius: 12px; background: var(--color-background-hover); border: 1px solid var(--color-border); box-sizing: border-box; padding: 0 15px; }
+.homehub-filters { display: flex; gap: 5px; flex-wrap: wrap; }
+.homehub-filters button { border: 0; border-radius: 20px; font-weight: 500; font-size: 12px; padding: 8px 12px; min-height: 40px; margin: 0; background: transparent; color: var(--color-text-maxcontrast); }
+.homehub-filters button[aria-pressed="true"] { background: var(--color-primary-element-light); color: var(--color-primary-element-light-text); }
+.homehub-count { font-size: 12px; color: var(--color-text-maxcontrast); margin: 0 0 14px; }
+.homehub-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.homehub-card { display: flex; align-items: flex-start; gap: 13px; position: relative; min-width: 0; padding: 22px 18px; min-height: 120px; box-sizing: border-box; background: var(--color-background-hover); border: 1px solid var(--color-border); border-radius: 18px; text-decoration: none; transition: border-color .15s, transform .15s; }
+.homehub-card:hover { border-color: var(--color-primary-element); transform: translateY(-2px); text-decoration: none; }
+.homehub a:focus-visible, .homehub button:focus-visible { outline: 3px solid var(--color-primary-element); outline-offset: 3px; }
+.homehub-app-icon { width: 50px; height: 50px; border-radius: 14px; flex: 0 0 50px; display: grid; place-items: center; }
+.homehub-app-icon img { width: 30px; height: 30px; object-fit: contain; filter: brightness(0) invert(1); }
+.homehub-card-copy { display: flex; flex-direction: column; gap: 7px; padding-top: 2px; }
+.homehub-card strong { font-size: 15px; font-weight: 650; line-height: 1.35; }
+.homehub-card-copy > span { color: var(--color-text-maxcontrast); font-size: 12px; line-height: 1.55; }
+.homehub-arrow { font-size: 16px; color: var(--color-text-maxcontrast); margin-left: auto; }
+.homehub-empty { padding: 40px 0; color: var(--color-text-maxcontrast); }
+.homehub-footer { border-top: 1px solid var(--color-border); margin-top: 30px; padding-top: 18px; font-size: 11px; color: var(--color-text-maxcontrast); }
+.homehub [hidden] { display: none !important; }
+@media (max-width: 950px) { .homehub-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) {
+  .homehub-inner { padding: 28px 16px 22px; }
+  .homehub-toolbar { gap: 12px; }
+  .homehub-search { max-width: none; flex-basis: 100%; }
+  .homehub-filters { gap: 1px; }
+  .homehub-filters button { padding: 8px 10px; }
+  .homehub-grid { gap: 10px; }
+  .homehub-card { flex-direction: column; gap: 12px; padding: 16px 13px; min-height: 170px; }
+  .homehub-card strong { font-size: 14px; }
+  .homehub-arrow { position: absolute; top: 16px; right: 13px; }
+}
+@media (prefers-reduced-motion: reduce) { .homehub-card { transition: none; } .homehub-card:hover { transform: none; } }
